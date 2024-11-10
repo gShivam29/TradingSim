@@ -5,7 +5,7 @@ main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(
-    "mongodb+srv://shivam:ITFru64e65Ce5VQO@cluster0.x6m7u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    ""
   );
 
   try {

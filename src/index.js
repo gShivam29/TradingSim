@@ -5,10 +5,11 @@ import App from './App';
 import Topbar from './components/Topbar.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <Topbar/>
-    {/* <App /> */}
+    <App />
   </React.StrictMode>
 );
 

@@ -18,10 +18,11 @@ function App() {
     const candleSeries = chart.addCandlestickSeries();
 
     fetch(
-      "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=1000"
+      "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=10000"
     )
       .then((res) => res.json())
       .then((data) => {
+        
         const cdata = data.map((d) => {
           return {
             time: d[0] / 1000,
@@ -32,6 +33,7 @@ function App() {
           };
         });
         candleSeries.setData(cdata);
+        
       })
       .catch((err) => console.log(err));
 
